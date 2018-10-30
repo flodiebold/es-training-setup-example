@@ -1,8 +1,5 @@
+import { foo } from "./module";
 
-import * as Module from "./module";
-
-describe("Module", () => {
-    it("multiplies stuff by 2", () => {
-        expect(Module.foo(3)).toEqual(6);
-    });
+test("foo multiplies stuff by 2", () => {
+    expect(foo(3)).toEqual(6);
 });
