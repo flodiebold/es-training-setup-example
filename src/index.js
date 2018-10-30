@@ -1,7 +1,7 @@
 /* @flow */
 
-import foo from "./module";
+import { foo } from "./module";
 
-console.log("Hallo Welt", foo(3));
+console.log("Hello world", foo(3));
 
-document.getElementById("content").append("Hallo Welt");
+document.getElementById("content").append("Hello world");
