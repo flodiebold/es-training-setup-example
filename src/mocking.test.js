@@ -1,6 +1,7 @@
 // we tell jest to mock the module:
-jest.mock("./module");
 import { foo } from "./module";
+
+jest.mock("./module");
 
 test("now foo is a mock", () => {
     foo.mockReturnValue(3);
