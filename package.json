@@ -1,8 +1,10 @@
 {
     "dependencies": {
-        "@babel/polyfill": "^7.0.0"
-    },
-    "devDependencies": {
+        "@babel/polyfill": "^7.0.0",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
         "@babel/core": "^7.1.2",
         "@babel/preset-env": "^7.1.0",
         "@babel/preset-flow": "^7.0.0",
@@ -26,6 +28,7 @@
     },
     "scripts": {
         "build": "webpack",
+        "start": "babel src/app -d bin && node bin/index.js",
         "flow": "flow",
         "lint": "eslint src/",
         "prettier": "prettier --write src/**/*.js",
@@ -38,7 +41,8 @@
             ".js$": "babel-7-jest"
         },
         "setupFiles": [
-            "./src/jestSetup"
-        ]
-    }
+            "./jestSetup"
+        ],
+        "rootDir": "src"
+  }
 }

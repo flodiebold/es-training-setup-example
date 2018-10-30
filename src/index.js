@@ -4,4 +4,8 @@ import { foo } from "./module";
 
 console.log("Hello world", foo(3));
 
-document.getElementById("content").append("Hello world");
+const element = document.getElementById("content");
+
+if (element) {
+    element.append("Hello world");
+}
